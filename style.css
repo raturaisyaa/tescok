@@ -1,0 +1,155 @@
+*, 
+html {
+margin: 0;
+padding: 0;
+}
+
+.parent {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+  }
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX('-10deg');
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX('0');
+    }
+}
+
+body {
+    background-image:linear-gradient(maroon, black);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+}
+
+@font-face {
+    font-family: durer;
+    src: url(Durer.ttf);
+}
+
+.hss {
+    animation: transitionIn 1.05s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:durer;
+    color: navajowhite;
+    margin-bottom: 30px;
+    font-style: bold;
+}
+
+
+.cocon {
+    animation: transitionIn 1.05;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500vh;
+    height: auto;
+}
+
+
+.focon {
+    margin-top: 30px;
+    animation: transitionIn 1.05s;
+    color: navajowhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.hearts img {
+    width: 50px;
+    animation: hearts 7s linear infinite;
+    opacity: 0.5;
+}
+
+.hearts {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -100px;
+}
+
+@keyframes hearts {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.75; 
+    }
+    70% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+
+.hearts img:nth-child(1){
+    animation-delay: 2s;
+}
+.hearts img:nth-child(2){
+    animation-delay: 1s;
+}
+.hearts img:nth-child(3){
+    animation-delay: 4.5s;
+}
+.hearts img:nth-child(4){
+    animation-delay: 2s;
+}
+.hearts img:nth-child(5){
+    animation-delay: 3s;
+}
+.hearts img::nth-child(6){
+    animation-delay: 6s;
+}
+.hearts img:nth-child(7){
+    animation-delay: 8s;
+}
+
+/*landscape mobile devices*/
+@media only screen and (orientation= landscape){
+    .hss{
+        margin-top: 300px;
+    }
+    iframe{
+        width:500px;
+        height:300px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .hss{
+      margin-top: 100px;  
+    }  
+    iframe{
+        width:640px;
+        height:480px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .hss{
+        margin-top: 100px;
+    }
+    iframe{
+        width: 640px;;
+        height: 480px;
+    }
+}
